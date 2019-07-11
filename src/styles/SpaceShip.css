@@ -1,0 +1,8 @@
+.spaceship {
+  height: 50px;
+  width: 50px;
+  margin-left: 30px;
+  color: gray;
+  background-color: gray;
+  position: relative;
+}
