@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import '../styles/Meteor.css'
 
-const Meteor = ({meteorPosition, top, spaceShipPosition}) => {
+const Meteor = ({meteorPosition, top, spaceShipPosition, setGameOver }) => {
 
   const divStyle = {
     position: 'fixed',
@@ -10,11 +10,9 @@ const Meteor = ({meteorPosition, top, spaceShipPosition}) => {
   };
 
 useEffect(() => {
-  if (meteorPosition <= 50) {
-    if (top == spaceShipPosition) {
-      console.log("DIRECT HIT!!!!!")
-      //can't do direct comparison.  Need range here.
-      //also need to remove the meteors if they are not direct hits after they've gone off of screen.
+  if (meteorPosition == 80) {
+    if ((spaceShipPosition <= top && spaceShipPosition >= top - 25) || (spaceShipPosition >= top && spaceShipPosition - 25 <= top )) {
+      setGameOver(true)
     }
   }
 })
