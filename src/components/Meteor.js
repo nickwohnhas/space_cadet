@@ -18,7 +18,7 @@ useEffect(() => {
 })
   return (
   <span className="meteor" style={divStyle}>
-    meteor
+    <span className="meteor-font"> meteor </span>
   </span>
   )
 }
