@@ -1,4 +1,5 @@
 .game-over {
   color: rgb(119, 117, 121);
   text-align: center;
+  align-items: center;
 }

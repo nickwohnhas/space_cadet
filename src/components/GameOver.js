@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import { Jumbotron, Container} from 'react-bootstrap'
 import '../styles/GameOver.css'
 
 const GameOver = ({startGame}) => {
@@ -18,8 +19,12 @@ const handleKeyDown = (e) => {
 
   return (
     <div className="game-over">
-      <h1>Game Over</h1>
-      <a>Press enter to play again</a>
+      <Container>
+       <Jumbotron className = "jumbotron bg-dark text-white border-bottom border-secondary" >
+          <h1>Game Over</h1>
+          <h2>Press enter to play again</h2>
+       </Jumbotron>
+      </Container>
     </div>
   )
 }
