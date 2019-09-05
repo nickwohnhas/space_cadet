@@ -20,7 +20,7 @@ const handleKeyDown = (e) => {
   return (
     <div className="game-over">
       <Container>
-       <Jumbotron className = "jumbotron bg-dark text-white border-bottom border-secondary" >
+       <Jumbotron className = "mb-0 bg-dark text-white border-bottom border-secondary" >
           <h1>Game Over</h1>
           <h2>Press enter to play again</h2>
        </Jumbotron>
