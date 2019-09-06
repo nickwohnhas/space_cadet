@@ -1,5 +1,21 @@
 .game-over {
-  color: rgb(119, 117, 121);
-  text-align: center;
-  align-items: center;
+  background: black;
 }
+
+.Modal {
+  margin: 0 auto;
+  background: grey;
+  width: 950px;
+  height: 600px;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: content-box;
+  border-radius: 25px;
+  border-style: inset;
+  border-color: aliceblue
+}
+
+.game-over-text {
+  margin-top: 150px;
+}
+

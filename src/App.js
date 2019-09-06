@@ -8,6 +8,7 @@ const App = () => {
   const [position, setPosition] = useState(150)
   const [meteors, setMeteors] = useState([<Meteor meteorPosition={1630} spaceShipPosition={position} top={Math.floor(Math.random() * 800)} />])
   const [gameOver, setGameOver] = useState(false)
+  const [score, setScore] = useState(0)
 
   const handleKeyDown = (e) => {
     if (e.key == "d") {
@@ -24,7 +25,14 @@ const App = () => {
   const startGame = () => {
     setPosition(150)
     setMeteors([<Meteor meteorPosition={1630} spaceShipPosition={position} top={Math.floor(Math.random() * 800)} />])
+    setScore(0)
     setGameOver(false)
+  }
+
+  const increaseScore = () => {
+    if (!gameOver) {
+      setScore(score + 10)
+    }
   }
 
   useLayoutEffect(() => {
@@ -47,6 +55,7 @@ const App = () => {
       // create array of new meteors based on positions
       let newMeteors = cleanedIntervals.map(({ meteorPosition, top }) => <Meteor meteorPosition={meteorPosition} spaceShipPosition={position} top={top} setGameOver={setGameOver} />)
       setMeteors(newMeteors)
+      increaseScore()
     })
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
@@ -56,7 +65,7 @@ const App = () => {
 
     return (
       <div className="App">
-        {gameOver && <GameOver startGame={startGame} /> }
+        {gameOver && <GameOver startGame={startGame} score={score} /> }
         {!gameOver && <SpaceShip handleKeyDown={handleKeyDown} position={position} /> }
         {!gameOver && (meteors.map((meteor) => (meteor)))}
       </div>
