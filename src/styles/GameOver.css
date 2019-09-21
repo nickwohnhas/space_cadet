@@ -1,21 +1,37 @@
 .game-over {
-  background: black;
-}
-
-.Modal {
-  margin: 0 auto;
-  background: grey;
-  width: 950px;
-  height: 600px;
-  padding: 1rem;
+  background: #f4f4f4;
   text-align: center;
-  box-sizing: content-box;
-  border-radius: 25px;
-  border-style: inset;
-  border-color: aliceblue
+  padding: 45px;
+  max-width: 600px;
+  margin: 100px auto;
+  border: #333 solid 5px;
 }
 
-.game-over-text {
-  margin-top: 150px;
+.game-over h1, h2 {
+  background: #333;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  padding: 50px;
+  border-radius: 10px;
+  border: none;
+}
+
+.game-over h2 {
+  font-size: 30px;
+}
+
+.game-over-header {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.score {
+  font-style: italic;
+  color: #BCDEFD;
+}
+
+.enter {
+  text-decoration: underline;
+  color: #BCDEFD;
 }
 

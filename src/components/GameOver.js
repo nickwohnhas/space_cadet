@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react'
-import Modal from 'react-modal'
 import '../styles/GameOver.css'
 
 const GameOver = ({startGame, score}) => {
@@ -22,13 +21,9 @@ const handleKeyDown = (e) => {
 
   return (
     <div className="game-over">
-      <Modal className='Modal' overlayClassName='Overlay' isOpen={showModal}>
-        <div className="game-over-text">
-          <h1>Game Over</h1>
-          <h2>Your score: {score}</h2>
-          <h3>Press Enter to play again</h3>
-        </div>
-      </Modal>
+      <h1 class="game-over-header">Game Over</h1>
+      <h2>Your score: <span class="score">{score}</span></h2>
+      <h2>Press <span class="enter">Enter</span> to play again</h2>
     </div>
   )
 }

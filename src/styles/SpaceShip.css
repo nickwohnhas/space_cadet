@@ -1,8 +1,11 @@
 .spaceship {
-  height: 25px;
+  height: 20px;
   width: 50px;
   margin-left: 30px;
-  color: gray;
-  background-color: gray;
-  position: fixed;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 5px solid #8470ff;
+  color: #c1cdcd;
+  background: #c1cdcd;
+  position: relative;
 }

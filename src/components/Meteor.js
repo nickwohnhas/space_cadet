@@ -4,7 +4,6 @@ import '../styles/Meteor.css'
 const Meteor = ({meteorPosition, top, spaceShipPosition, setGameOver }) => {
 
   const divStyle = {
-    position: 'fixed',
     marginLeft: `${meteorPosition}px`,
     top: `${top}px`
   };
@@ -17,9 +16,8 @@ useEffect(() => {
   }
 })
   return (
-  <span className="meteor" style={divStyle}>
-    <span className="meteor-font"> meteor </span>
-  </span>
+  <div className="meteor" style={divStyle}>
+  </div>
   )
 }
 

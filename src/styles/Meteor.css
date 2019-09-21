@@ -2,10 +2,7 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  color: orangered;
-  background-color: orangered;
-}
-
-.meteor-font {
-  visibility: hidden;
+  color: #ff7f24;
+  background-color: #ff7f24;
+  position: absolute;
 }

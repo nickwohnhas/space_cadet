@@ -7,9 +7,8 @@ const SpaceShip = ({position}) => {
   };
 
   return (
-    <span className="spaceship" style={divStyle} >
-      meteor
-    </span>
+    <div className="spaceship" style={divStyle} >
+    </div>
   )
 }
 
