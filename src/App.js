@@ -2,7 +2,6 @@ import React, {useState, useLayoutEffect} from 'react'
 import SpaceShip from './components/SpaceShip'
 import Meteor from './components/Meteor'
 import GameOver from './components/GameOver'
-import '../src/styles/App.css'
 
 const App = () => {
   const [position, setPosition] = useState(150)
@@ -11,15 +10,17 @@ const App = () => {
   const [score, setScore] = useState(0)
 
   const handleKeyDown = (e) => {
-    if (e.key == "d") {
-      let newPosition = position
-      newPosition -= 10
-      setPosition(newPosition)
-    } else if (e.key == "c") {
-      let newPosition = position
-      newPosition += 10
-      setPosition(newPosition)
-    }
+    requestAnimationFrame(() => {
+      if (e.key == "d") {
+        let newPosition = position
+        newPosition -= 10
+        setPosition(newPosition)
+      } else if (e.key == "c") {
+        let newPosition = position
+        newPosition += 10
+        setPosition(newPosition)
+      }
+    })
   }
 
   const startGame = () => {
