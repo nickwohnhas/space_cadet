@@ -5,17 +5,18 @@ import GameOver from './components/GameOver'
 
 const App = () => {
   const [position, setPosition] = useState(150)
-  const [meteors, setMeteors] = useState([<Meteor meteorPosition={1630} spaceShipPosition={position} top={Math.floor(Math.random() * 800)} />])
+  const [meteors, setMeteors] = useState([<Meteor meteorPosition={1630} spaceShipPosition={position} top={Math.floor(Math.random() * window.innerHeight)} />])
   const [gameOver, setGameOver] = useState(false)
   const [score, setScore] = useState(0)
 
   const handleKeyDown = (e) => {
     requestAnimationFrame(() => {
-      if (e.key == "d") {
+      if (e.key == "d" && position > 0) {
         let newPosition = position
         newPosition -= 10
         setPosition(newPosition)
-      } else if (e.key == "c") {
+
+      } else if (e.key == "c"  && position < window.innerHeight - 30) {
         let newPosition = position
         newPosition += 10
         setPosition(newPosition)
