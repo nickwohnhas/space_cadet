@@ -6,6 +6,8 @@ const GameOver = ({startGame, score}) => {
 const handleKeyDown = (e) => {
   if (e.keyCode == 13) {
     startGame()
+  } else if (e.keyCode == 32) {
+    window.location.href = "/"
   }
 }
 
@@ -21,6 +23,7 @@ const handleKeyDown = (e) => {
       <h1 className="game-over-header">Game Over</h1>
       <h2>Your score: <span className="score">{score}</span></h2>
       <h2>Press <span className="enter">Enter</span> to play again</h2>
+      <h2>Press <span className="enter">SpaceBar</span> to return to menu</h2>
     </div>
   )
 }

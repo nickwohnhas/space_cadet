@@ -16,6 +16,20 @@
   border: none;
 }
 
+.controls {
+  background: #333;
+  color: #f4f4f4;
+
+  padding: 50px;
+  border-radius: 10px;
+  border: none;
+  font-size: 30px;
+}
+
+.controls p {
+  padding-bottom: 20px;
+}
+
 .game-over h2 {
   font-size: 30px;
 }
