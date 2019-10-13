@@ -19,11 +19,11 @@ const handleKeyDown = (e) => {
   })
 
   return (
-    <div className="game-over">
-      <h1 className="game-over-header">Game Over</h1>
-      <h2>Your score: <span className="score">{score}</span></h2>
-      <h2>Press <span className="enter">Enter</span> to play again</h2>
-      <h2>Press <span className="enter">SpaceBar</span> to return to menu</h2>
+    <div className="container">
+      <h1 className="item">Game Over</h1>
+      <h2 className="item">Your score: <span className="score">{score}</span></h2>
+      <h2 className="item">Press <span className="option">Enter</span> to play again</h2>
+      <h2 className="item">Press <span className="option">SpaceBar</span> to return to menu</h2>
     </div>
   )
 }
