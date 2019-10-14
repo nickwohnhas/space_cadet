@@ -10,7 +10,7 @@ const Meteor = ({meteorPosition, top, spaceShipPosition, setGameOver }) => {
 
 useEffect(() => {
   if (meteorPosition == 80) {
-    if ((spaceShipPosition <= top && spaceShipPosition >= top - 25) || (spaceShipPosition >= top && spaceShipPosition - 25 <= top )) {
+    if ((spaceShipPosition <= top && spaceShipPosition >= top - 25) || (spaceShipPosition >= top && spaceShipPosition - 50 <= top )) {
       setGameOver(true)
     }
   }
