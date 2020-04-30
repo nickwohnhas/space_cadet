@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
 import '../styles/GameOver.css'
 
-const GameOver = ({startGame, score}) => {
+const GameOver = ({ startGame, score }) => {
 
-const handleKeyDown = (e) => {
-  if (e.keyCode == 13) {
-    startGame()
-  } else if (e.keyCode == 32) {
-    window.location.href = "/"
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      startGame()
+    } else if (e.keyCode === 32) {
+      window.location.href = "/"
+    }
   }
-}
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
